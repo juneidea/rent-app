@@ -7,7 +7,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="h-full w-full">
       <Navbar />
       <main
-        className={`h-full w-full flex flex-col`}
+        className="h-full w-full flex flex-col"
         style={{ paddingTop: `${NAVBAR_HEIGHT}px` }}
       >
         {children}
