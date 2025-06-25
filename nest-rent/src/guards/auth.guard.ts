@@ -23,13 +23,13 @@ export class AuthGuard implements CanActivate {
           token,
           process.env.JSON_TOKEN_KEY,
         )) as jwt.JwtPayload;
-        const user = await this.prismaService.user.findUnique({
-          where: {
-            id: jwtUser.id,
-          },
-        });
-        if (!user) return false;
-        if (roles.includes(user.user_type)) return true;
+        // const user = await this.prismaService.user.findUnique({
+        //   where: {
+        //     id: jwtUser.id,
+        //   },
+        // });
+        // if (!user) return false;
+        // if (roles.includes(user.user_type)) return true;
         return false;
       } catch (error) {
         return false;

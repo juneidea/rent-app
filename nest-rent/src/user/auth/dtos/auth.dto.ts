@@ -1,4 +1,3 @@
-import { UserType } from '@prisma/client';
 import {
   IsString,
   IsNotEmpty,
@@ -43,7 +42,4 @@ export class SigninDto {
 export class GenerateProductKeyDto {
   @IsEmail()
   email: string;
-
-  @IsEnum(UserType)
-  userType: UserType;
 }
